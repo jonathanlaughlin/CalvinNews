@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66DCADFAF4F93F18C6DB8309 /* Pods_CalvinNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DEBBCE91413910E5A75FC /* Pods_CalvinNews.framework */; };
+		8E5BFFF2209203E200C1F3F9 /* NewsStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5BFFF1209203E200C1F3F9 /* NewsStory.swift */; };
+		8E8A36552092648200E6D951 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A36542092648200E6D951 /* StoryViewController.swift */; };
 		8EAA6BBD2090B3AA00D110BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA6BBC2090B3AA00D110BF /* AppDelegate.swift */; };
-		8EAA6BBF2090B3AA00D110BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA6BBE2090B3AA00D110BF /* ViewController.swift */; };
+		8EAA6BBF2090B3AA00D110BF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA6BBE2090B3AA00D110BF /* NewsViewController.swift */; };
 		8EAA6BC22090B3AA00D110BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAA6BC02090B3AA00D110BF /* Main.storyboard */; };
 		8EAA6BC42090B3AC00D110BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAA6BC32090B3AC00D110BF /* Assets.xcassets */; };
 		8EAA6BC72090B3AC00D110BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAA6BC52090B3AC00D110BF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048DEBBCE91413910E5A75FC /* Pods_CalvinNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalvinNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F30570C94A77AC0E4F8A827 /* Pods-CalvinNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalvinNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalvinNews/Pods-CalvinNews.debug.xcconfig"; sourceTree = "<group>"; };
+		8E5BFFF1209203E200C1F3F9 /* NewsStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStory.swift; sourceTree = "<group>"; };
+		8E8A36542092648200E6D951 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		8EAA6BB92090B3AA00D110BF /* CalvinNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalvinNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAA6BBC2090B3AA00D110BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EAA6BBE2090B3AA00D110BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EAA6BBE2090B3AA00D110BF /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		8EAA6BC12090B3AA00D110BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EAA6BC32090B3AC00D110BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EAA6BC62090B3AC00D110BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EAA6BC82090B3AC00D110BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7D1933AC8F38E7FABFB68F7 /* Pods-CalvinNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalvinNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalvinNews/Pods-CalvinNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DCADFAF4F93F18C6DB8309 /* Pods_CalvinNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B3DDEC51EB412BE922C6BF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F30570C94A77AC0E4F8A827 /* Pods-CalvinNews.debug.xcconfig */,
+				B7D1933AC8F38E7FABFB68F7 /* Pods-CalvinNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E5BFFEF2092032600C1F3F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EAA6BBE2090B3AA00D110BF /* NewsViewController.swift */,
+				8E8A36542092648200E6D951 /* StoryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8E5BFFF02092033500C1F3F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EAA6BC02090B3AA00D110BF /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E5BFFF3209203F500C1F3F9 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E5BFFF1209203E200C1F3F9 /* NewsStory.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 		8EAA6BB02090B3AA00D110BF = {
 			isa = PBXGroup;
 			children = (
 				8EAA6BBB2090B3AA00D110BF /* CalvinNews */,
 				8EAA6BBA2090B3AA00D110BF /* Products */,
+				1B3DDEC51EB412BE922C6BF3 /* Pods */,
+				F8FE387EAB6C2810659E3464 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +100,22 @@
 			isa = PBXGroup;
 			children = (
 				8EAA6BBC2090B3AA00D110BF /* AppDelegate.swift */,
-				8EAA6BBE2090B3AA00D110BF /* ViewController.swift */,
-				8EAA6BC02090B3AA00D110BF /* Main.storyboard */,
+				8E5BFFEF2092032600C1F3F9 /* Controllers */,
+				8E5BFFF3209203F500C1F3F9 /* Data Model */,
+				8E5BFFF02092033500C1F3F9 /* Views */,
 				8EAA6BC32090B3AC00D110BF /* Assets.xcassets */,
 				8EAA6BC52090B3AC00D110BF /* LaunchScreen.storyboard */,
 				8EAA6BC82090B3AC00D110BF /* Info.plist */,
 			);
 			path = CalvinNews;
+			sourceTree = "<group>";
+		};
+		F8FE387EAB6C2810659E3464 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				048DEBBCE91413910E5A75FC /* Pods_CalvinNews.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EAA6BCB2090B3AC00D110BF /* Build configuration list for PBXNativeTarget "CalvinNews" */;
 			buildPhases = (
+				A8BD5A5B355D965D8EE0E494 /* [CP] Check Pods Manifest.lock */,
 				8EAA6BB52090B3AA00D110BF /* Sources */,
 				8EAA6BB62090B3AA00D110BF /* Frameworks */,
 				8EAA6BB72090B3AA00D110BF /* Resources */,
+				039C5320C86A7A74FDEF4E1C /* [CP] Embed Pods Frameworks */,
+				DC3EE4446964B27543862477 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +187,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		039C5320C86A7A74FDEF4E1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CalvinNews/Pods-CalvinNews-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalvinNews/Pods-CalvinNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BD5A5B355D965D8EE0E494 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalvinNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC3EE4446964B27543862477 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalvinNews/Pods-CalvinNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EAA6BB52090B3AA00D110BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EAA6BBF2090B3AA00D110BF /* ViewController.swift in Sources */,
+				8E8A36552092648200E6D951 /* StoryViewController.swift in Sources */,
+				8EAA6BBF2090B3AA00D110BF /* NewsViewController.swift in Sources */,
+				8E5BFFF2209203E200C1F3F9 /* NewsStory.swift in Sources */,
 				8EAA6BBD2090B3AA00D110BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,15 +397,13 @@
 		};
 		8EAA6BCC2090B3AC00D110BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F30570C94A77AC0E4F8A827 /* Pods-CalvinNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PY38XTSL9J;
 				INFOPLIST_FILE = CalvinNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.calvin.CalvinNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +413,13 @@
 		};
 		8EAA6BCD2090B3AC00D110BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7D1933AC8F38E7FABFB68F7 /* Pods-CalvinNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PY38XTSL9J;
 				INFOPLIST_FILE = CalvinNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.calvin.CalvinNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
