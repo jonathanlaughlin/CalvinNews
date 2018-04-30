@@ -30,6 +30,8 @@ class NewsViewController: UITableViewController, CanReceive {
         
         super.viewDidLoad()
         
+//        var menuView = UIView
+        
         loadStories()
         
     }

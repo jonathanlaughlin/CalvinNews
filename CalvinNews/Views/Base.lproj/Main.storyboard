@@ -33,7 +33,9 @@
                             <outlet property="delegate" destination="t7H-Be-WS4" id="ZRC-sv-Ec9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Calvin News" id="SKn-TR-qE5"/>
+                    <navigationItem key="navigationItem" title="Calvin News" id="SKn-TR-qE5">
+                        <barButtonItem key="rightBarButtonItem" title="Menu" id="kLW-2X-pnA"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="1Nf-3L-smb" kind="show" identifier="readNewsItem" id="Wno-yg-lQi"/>
                     </connections>
@@ -51,21 +53,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W86-Ge-FMA">
-                                <rect key="frame" x="25" y="76" width="342" height="58"/>
+                                <rect key="frame" x="25" y="224" width="326" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="aOy-wB-5ZO">
-                                <rect key="frame" x="25" y="278" width="325" height="369"/>
+                                <rect key="frame" x="25" y="290" width="326" height="357"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-0c-iLc">
-                                <rect key="frame" x="25" y="142" width="240" height="128"/>
+                                <rect key="frame" x="25" y="78" width="228" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -82,6 +84,28 @@
             </objects>
             <point key="canvasLocation" x="616.79999999999995" y="-261.31934032983509"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hSb-2Y-gRb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uja-cr-hQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="jsU-kT-DtU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H3U-P8-EPy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wv6-jc-yxJ">
+                                <rect key="frame" x="0.0" y="67" width="375" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oAT-8a-Oiq"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1285.5999999999999" y="-259.52023988005999"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="G1z-SF-uHt">
             <objects>
@@ -91,7 +115,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.41597076842022429" green="0.11319769793039593" blue="0.25073402225189667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.46274509803921571" green="0.019607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99607843137254903" green="0.97647058823529409" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>

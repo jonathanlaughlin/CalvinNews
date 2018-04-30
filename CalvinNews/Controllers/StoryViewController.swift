@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import SDWebImage
 import ChameleonFramework
+import Alamofire
 
 protocol CanReceive {
     
@@ -29,6 +30,7 @@ class StoryViewController: UIViewController {
     
     @IBOutlet weak var labelForBody: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +42,21 @@ class StoryViewController: UIViewController {
 
         labelForBody.text = data?.body
         
-        imageView.sd_setImage(with: Foundation.URL(string: (data?.imageURL)!))
+        let newsImageURL = Foundation.URL(string: (data?.imageURL)!)
+        let placeholderImageURL = Foundation.URL(string: "https://calvin.edu/global/images/calvin-college-nameplate.jpeg")
+
+        Alamofire.request(newsImageURL!, method: .get).responseData { (responseData) in
+            
+            if responseData.error != nil {
+                self.imageView.sd_setImage(with: placeholderImageURL)
+            }
+            else {
+                self.imageView.sd_setImage(with: newsImageURL)
+            }
+            
+        }
+        
+        
     }
     
     override func viewWillLayoutSubviews() {
