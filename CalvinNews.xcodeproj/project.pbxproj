@@ -9,18 +9,24 @@
 /* Begin PBXBuildFile section */
 		66DCADFAF4F93F18C6DB8309 /* Pods_CalvinNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DEBBCE91413910E5A75FC /* Pods_CalvinNews.framework */; };
 		8E5BFFF2209203E200C1F3F9 /* NewsStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5BFFF1209203E200C1F3F9 /* NewsStory.swift */; };
+		8E6351ED2097A00400F0FE30 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E6351EC2097A00400F0FE30 /* Settings.bundle */; };
+		8E6351EF2097A82000F0FE30 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6351EE2097A82000F0FE30 /* PreferencesViewController.swift */; };
 		8E8A36552092648200E6D951 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A36542092648200E6D951 /* StoryViewController.swift */; };
 		8EAA6BBD2090B3AA00D110BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA6BBC2090B3AA00D110BF /* AppDelegate.swift */; };
 		8EAA6BBF2090B3AA00D110BF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA6BBE2090B3AA00D110BF /* NewsViewController.swift */; };
 		8EAA6BC22090B3AA00D110BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAA6BC02090B3AA00D110BF /* Main.storyboard */; };
 		8EAA6BC42090B3AC00D110BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAA6BC32090B3AC00D110BF /* Assets.xcassets */; };
 		8EAA6BC72090B3AC00D110BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAA6BC52090B3AC00D110BF /* LaunchScreen.storyboard */; };
+		8EBD46552098E088005B96D3 /* ArchivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD46542098E088005B96D3 /* ArchivesViewController.swift */; };
+		8EFAF6CA209A4D1500E8B71E /* OldNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFAF6C9209A4D1500E8B71E /* OldNewsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		048DEBBCE91413910E5A75FC /* Pods_CalvinNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalvinNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F30570C94A77AC0E4F8A827 /* Pods-CalvinNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalvinNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalvinNews/Pods-CalvinNews.debug.xcconfig"; sourceTree = "<group>"; };
 		8E5BFFF1209203E200C1F3F9 /* NewsStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStory.swift; sourceTree = "<group>"; };
+		8E6351EC2097A00400F0FE30 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8E6351EE2097A82000F0FE30 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		8E8A36542092648200E6D951 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		8EAA6BB92090B3AA00D110BF /* CalvinNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalvinNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAA6BBC2090B3AA00D110BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +35,8 @@
 		8EAA6BC32090B3AC00D110BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EAA6BC62090B3AC00D110BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EAA6BC82090B3AC00D110BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EBD46542098E088005B96D3 /* ArchivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesViewController.swift; sourceTree = "<group>"; };
+		8EFAF6C9209A4D1500E8B71E /* OldNewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldNewsTableViewController.swift; sourceTree = "<group>"; };
 		B7D1933AC8F38E7FABFB68F7 /* Pods-CalvinNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalvinNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalvinNews/Pods-CalvinNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,8 +64,11 @@
 		8E5BFFEF2092032600C1F3F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8EFAF6C9209A4D1500E8B71E /* OldNewsTableViewController.swift */,
 				8EAA6BBE2090B3AA00D110BF /* NewsViewController.swift */,
 				8E8A36542092648200E6D951 /* StoryViewController.swift */,
+				8E6351EE2097A82000F0FE30 /* PreferencesViewController.swift */,
+				8EBD46542098E088005B96D3 /* ArchivesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 				8EAA6BC32090B3AC00D110BF /* Assets.xcassets */,
 				8EAA6BC52090B3AC00D110BF /* LaunchScreen.storyboard */,
 				8EAA6BC82090B3AC00D110BF /* Info.plist */,
+				8E6351EC2097A00400F0FE30 /* Settings.bundle */,
 			);
 			path = CalvinNews;
 			sourceTree = "<group>";
@@ -179,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6351ED2097A00400F0FE30 /* Settings.bundle in Resources */,
 				8EAA6BC72090B3AC00D110BF /* LaunchScreen.storyboard in Resources */,
 				8EAA6BC42090B3AC00D110BF /* Assets.xcassets in Resources */,
 				8EAA6BC22090B3AA00D110BF /* Main.storyboard in Resources */,
@@ -252,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6351EF2097A82000F0FE30 /* PreferencesViewController.swift in Sources */,
+				8EFAF6CA209A4D1500E8B71E /* OldNewsTableViewController.swift in Sources */,
 				8E8A36552092648200E6D951 /* StoryViewController.swift in Sources */,
 				8EAA6BBF2090B3AA00D110BF /* NewsViewController.swift in Sources */,
+				8EBD46552098E088005B96D3 /* ArchivesViewController.swift in Sources */,
 				8E5BFFF2209203E200C1F3F9 /* NewsStory.swift in Sources */,
 				8EAA6BBD2090B3AA00D110BF /* AppDelegate.swift in Sources */,
 			);
@@ -403,7 +419,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PY38XTSL9J;
 				INFOPLIST_FILE = CalvinNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.calvin.CalvinNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -419,7 +438,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PY38XTSL9J;
 				INFOPLIST_FILE = CalvinNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.calvin.CalvinNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

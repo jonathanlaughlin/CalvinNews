@@ -10,28 +10,23 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class NewsViewController: UITableViewController, CanReceive {
+
+class NewsViewController: UITableViewController, CanReceive, ChangeSource {
     
-    func dataReceived(data: NewsStory) {
-        // nothing
-    }
-    
+    let defaults = UserDefaults.standard
     
     var newsStories = [NewsStory]()
     
     var selectedStory = NewsStory()
     
-    // Test URL for News & Stories
-//    let calvinURL = "https://calvin.edu/api/content/render/false/type/json/query/+contentType:CcNewsStories%20+(conhost:cd97e902-9dba-4e51-87f9-1f712806b9c4%20conhost:SYSTEM_HOST)%20+languageId:1%20+deleted:false%20+live:true/limit/18/orderby/CcNewsStories.publishDate%20desc"
-    
-    let calvinURL = "https://calvin.edu/api/content/render/false/type/json/query/+contentType:CcAnnouncements%20+(conhost:cd97e902-9dba-4e51-87f9-1f712806b9c4%20conhost:SYSTEM_HOST)%20+CcAnnouncements.startDate:20250427*%20+languageId:1%20+deleted:false%20+working:true/orderby/CcAnnouncements.startDate"
+    var calvinURL: String = ""
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-//        var menuView = UIView
-        
+        self.refreshControl?.addTarget(self, action: #selector(NewsViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+
         loadStories()
         
     }
@@ -48,6 +43,10 @@ class NewsViewController: UITableViewController, CanReceive {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsStoryCell", for: indexPath)
         
         let story = newsStories[indexPath.row]
+        
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+//        cell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
 
         cell.textLabel?.text = story.headline
         
@@ -59,7 +58,6 @@ class NewsViewController: UITableViewController, CanReceive {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedStory = newsStories[indexPath.row]
-//        print(selectedStory.headline)
         
         performSegue(withIdentifier: "readNewsItem", sender: self)
         
@@ -76,13 +74,40 @@ class NewsViewController: UITableViewController, CanReceive {
             secondVC.delegate = self
 
         }
+        else {
+            if segue.identifier == "toPreferencesSegue" {
+                
+                let optionsVC = segue.destination as! PreferencesViewController
+                
+                optionsVC.delegate = self
+                
+            }
+        }
 
     }
     
     //MARK: Data Manipulation Methods
     
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        newsStories = [NewsStory]()
+        loadStories()
+        refreshControl.endRefreshing()
+    }
+    
     func loadStories() {
-
+        
+        let sourcePref = defaults.integer(forKey: "Source")
+        var displayOn: String = ""
+        
+        if sourcePref == 1 {
+            displayOn = "displayOnStudentNews:*yes*"
+        }
+        else {
+            displayOn = "displayOnCalvinNews:*yes*"
+        }
+        
+        calvinURL = "https://calvin.edu/api/content/render/false/type/json/query/+contentType:CcAnnouncements%20+(conhost:cd97e902-9dba-4e51-87f9-1f712806b9c4%20conhost:SYSTEM_HOST)%20+CcAnnouncements.startDate:20250427*%20+CcAnnouncements."+displayOn+"%20+languageId:1%20+deleted:false%20+live:true/orderby/CcAnnouncements.startDate"
+        
         Alamofire.request(calvinURL, method: .get).responseJSON { (response) in
 
             if response.result.isSuccess {
@@ -104,10 +129,19 @@ class NewsViewController: UITableViewController, CanReceive {
             else {
                 print("ERROR \(String(describing: response.result.error))")
             }
-
         }
+    }
 
+    
+    //MARK: Protocol methods
+    
+    func dataReceived(data: NewsStory) {
+        // nothing
     }
     
+    func sourceChange() {
+        newsStories = [NewsStory]()
+        loadStories()
+    }
 }
 
